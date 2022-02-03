@@ -7,6 +7,10 @@ body {
     background-color: #FCFCFC !important;
 }
 
+.navbar {
+    background-color: #FCFCFC !important;
+}
+
 .blackText {
     color: #202020;
 }
@@ -33,7 +37,8 @@ body {
 }
 
 .homePage {
-
+    /* width: 90%; */
+    min-width: 80em;
 }
 
 .name {
@@ -70,3 +75,10 @@ body {
     font-weight: 300;
     font-size: larger;
 }
+
+/* ScrollBar */
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0.625rem;
+}
+/* /// */

@@ -3,7 +3,7 @@
 <ellipse cx="588" cy="652.224" rx="147.803" ry="128.895" transform="rotate(23.5567 588 652.224)" fill="#F2F3BE"/>
 </g>
 <g filter="url(#filter1_d_50_2)">
-<rect x="33" y="172.203" width="858.057" height="858.057" transform="rotate(-14.594 33 172.203)" fill="url(#pattern0)" shape-rendering="crispEdges"/>
+<rect x="-15" y="33.203" width="850.057" height="850.057" transform="rotate(-14.594 33 172.203)" fill="url(#pattern0)" shape-rendering="crispEdges"/>
 </g>
 <defs>
 <filter id="filter0_f_50_2" x="343.012" y="420.098" width="489.976" height="464.252" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
