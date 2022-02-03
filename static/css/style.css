@@ -1,0 +1,12 @@
+* {
+    font-family: 'Epilogue', sans-serif;
+}
+
+.navLabel {
+    color: #5C5C5C;
+    font-size: larger;
+}
+
+.navLabel:hover {
+    color: #3a3a3a;
+}
