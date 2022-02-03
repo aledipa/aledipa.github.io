@@ -3,6 +3,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background-color: #FCFCFC !important;
+}
+
 .blackText {
     color: #202020;
 }
@@ -42,4 +46,27 @@
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 95%;
+}
+
+.blackButton, .grayButton {
+    width: 8.5em;
+    height: 3.7em;
+    border-radius: 10px;
+    border: none;
+    outline: 0;
+}
+
+.grayButton {
+    background-color: #CFCFCF;
+    color: #262626;
+}
+
+.blackButton {
+    background-color: #262626;
+    color: #CFCFCF;
+}
+
+.buttonText {
+    font-weight: 300;
+    font-size: larger;
 }
