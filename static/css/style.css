@@ -1,5 +1,22 @@
 * {
     font-family: 'Epilogue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blackText {
+    color: #202020;
+}
+
+.grayText {
+    color: #707070;
+}
+
+.shadeGrayText {
+    color: #7B7B7B;
+}
+
+.lightGrayText {
+    color: #E3E3E3 !important;
 }
 
 .navLabel {
@@ -9,4 +26,20 @@
 
 .navLabel:hover {
     color: #3a3a3a;
+}
+
+.homePage {
+
+}
+
+.name {
+    font-weight: 500;
+    font-size: 3.5rem;
+    line-height: 90%;
+}
+
+.description {
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 95%;
 }
