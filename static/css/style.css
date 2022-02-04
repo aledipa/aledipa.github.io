@@ -45,12 +45,14 @@ body {
     font-weight: 500;
     font-size: 3.5rem;
     line-height: 90%;
+    margin-left: 1.7em;
 }
 
 .description {
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 95%;
+    width: 95%;
 }
 
 .blackButton, .grayButton {
@@ -85,6 +87,42 @@ body {
 .buttonText {
     font-weight: 300;
     font-size: larger;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.buttons {
+    padding-left: 4em;
+}
+
+
+@media screen and (max-width: 650px) {
+    .topnav {
+        display: none !important;
+    }
+
+    .topnavmobile {
+        display: block !important;
+    }
+
+    .name {
+        margin-left: 0.8em;
+        zoom: 70%;
+        -moz-transform: 80%;
+    }
+    .buttons {
+        padding-left: 0em;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .topnavmobile {
+        display: none !important;
+    }
 }
 
 /* ScrollBar */
