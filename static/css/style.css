@@ -69,6 +69,17 @@ body {
 .blackButton {
     background-color: #262626;
     color: #CFCFCF;
+    text-decoration: none;
+}
+
+.blackButton:hover {
+    color: #e2e0e0;
+    text-decoration: none;
+}
+
+.grayButton:hover {
+    color: #5e5e5e;
+    text-decoration: none;
 }
 
 .buttonText {
