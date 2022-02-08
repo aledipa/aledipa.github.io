@@ -73,23 +73,22 @@ function animateName() {
         ta.setSelector("#surname");
         // Types the surname
         ta.typingForward('Di Pasquale', 0);
-    }, (tout+300));
+    }, (tout+350));
 
     // Sets a generic timeout and shows the semicolon
     setTimeout(() => {
         $("#semicolon").removeClass("d-none"); 
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
-    }, (tout+tout+450));
+    }, (tout+tout+460));
 
 }
 
 
 // Onload functions
 $(document).ready(
-    function() {
+    setTimeout(function() {
         animateName();
-        // dynamicDescription();
-    }
+    }, 500)
     
 );
