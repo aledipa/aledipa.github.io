@@ -7,24 +7,45 @@ body {
     background-color: #FCFCFC !important;
 }
 
-.navbar {
-    background-color: #FCFCFC !important;
+.sectionLabel {
+    font-size: 1.6rem;
+    font-weight: 300;
 }
+
+/* .projectCategory {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.projectTitle {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.projectDescription {
+    font-size: 1.4rem;
+    font-weight: 200;
+    width: 50%;
+} */
 
 .blackText {
     color: #202020;
 }
 
 .grayText {
-    color: #707070;
+    color: #707070 !important;
 }
 
 .shadeGrayText {
-    color: #7B7B7B;
+    color: #7B7B7B !important;
 }
 
 .lightGrayText {
     color: #E3E3E3 !important;
+}
+
+.navbar {
+    background-color: #FCFCFC !important;
 }
 
 .navLabel {
@@ -37,7 +58,6 @@ body {
 }
 
 .homePage {
-    /* width: 90%; */
     min-width: 80em;
 }
 
@@ -52,7 +72,7 @@ body {
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 95%;
-    width: 95%;
+    /* width: 95%; */
 }
 
 .blackButton, .grayButton {
@@ -99,6 +119,15 @@ body {
     padding-left: 4em;
 }
 
+.verticaline {
+    width: 0.05em;
+    height: 30em;
+    background-color: #707070;
+}
+
+/* .mainSection {
+    padding-left: 17.3em;
+} */
 
 @media screen and (max-width: 650px) {
     .topnav {
@@ -108,11 +137,20 @@ body {
     .topnavmobile {
         display: block !important;
     }
-
+    #graph0 {
+        display: none;
+    }
+    /* .projectTitle {
+        margin-left: 0.8em;
+        transform: scale(0.4);
+    } */
     .name {
         margin-left: 0.8em;
         zoom: 70%;
-        -moz-transform: 80%;
+        -moz-transform: 70%;
+    }
+    .categoryIcon {
+        margin-right: 2em;
     }
     .buttons {
         padding-left: 0em;
@@ -130,4 +168,33 @@ body {
     background: transparent;
     border-radius: 0.625rem;
 }
+/* /// */
+
+/* Description animation */
+.slide-left {
+	-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(175px);
+              transform: translateX(175px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(175px);
+              transform: translateX(175px);
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+  
 /* /// */

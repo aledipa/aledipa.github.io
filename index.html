@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/css/style.css" type="text/css">
+    <link rel='stylesheet' href='static/css/TA.css' type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="static/js/script.js"></script>
+    <script src="static/js/TA.js"></script>
     <title>AleDipa</title>
 </head>
 
@@ -56,43 +58,56 @@
     </nav>
 
 
-
     <!-- HomePage -->
     <div class="homePage row navbar align-items-start">
         <div class="column">
             <!-- Name -->
-            <!--  ml-5 pl-5 -->
             <div class="name mt-5 pt-5 ">
-                <p class="blackText"> Alessandro<a class="lightGrayText">:</a> </p>
+                <!-- <a class="lightGrayText">:</a> -->
                 <div class="row">
-                    <img class="ml-4" src="static/img/Icons/Tab.svg" height="50">
-                    <p class="grayText ml-4"> Di Pasquale<a class="lightGrayText">;</a> </p>
+                    <p class="blackText ml-4" id="name">  </p> <a class="lightGrayText d-none" id="dots">:</a>
                 </div>
-                <p class="description shadeGrayText"> Full-Stack Developer from North Italy. </p>
+                <div class="row">
+                    <img class="ml-4 d-none" id="tab" src="static/img/Icons/Tab.svg" height="50">
+                    <div class="row">
+                        <p class="grayText ml-4" id="surname">  </p> <a class="lightGrayText d-none" id="semicolon">;</a>
+                    </div>
+                </div>
+                <p class="description shadeGrayText slide-left ml-2" id="dyndescr"> Full-Stack Developer from North Italy. </p>
             </div>
             
             <!-- Buttons -->
             <div class="buttons row mt-5 pt-5">
                 <!--  ml-5 -->
-                <a class="blackButton row pt-1 pl-1 ml-5 mb-3" href="https://github.com/aledipa">
+                <a class="blackButton row pt-1 pl-1 ml-5 mb-3" target="_blank" href="https://github.com/aledipa">
                     <img src="static/img/Icons/GitHub.svg" height="50"> 
                     <p class="buttonText mt-2 ml-1 pt-1">GitHub</p>
                 </a>
 
-                <a class="grayButton row pt-1 pl-1 ml-5 mb-3" href="https://docs.google.com/document/d/1oL6A8vEMB1mmqaZxwmsmgPfO5iNQrxfSNO6RTD8Doh4/edit?usp=sharing">
+                <a class="grayButton row pt-1 pl-1 ml-5 mb-3" target="_blank" href="https://docs.google.com/document/d/1j7OJAW7GZ9_Qk0yG472pN2U4dfzE37u0pea7EdwIsHc/edit?usp=sharing">
                     <img src="static/img/Icons/CV.svg" height="40" class="mt-1 ml-1"> 
                     <p class="buttonText mt-2 ml-1 pt-1">Resume</p>
                 </a>
             </div>
+
+            <!-- Vertical Line -->
+            <div class="column mt-5 pt-5 mainSection">
+                <p class="grayText row d-flex justify-content-center sectionLabel"> Projects </p>
+                <div class="row d-flex justify-content-center ">
+                    <div class="verticaline"></div>
+                </div>
+            </div>
+            
+
         </div>
         
         <!-- Graphic Image -->
-        <div class="flex-row justify-content-end">
+        <div class="flex-row justify-content-end" id="graph0">
             <img src="static/img/Graphics/Lamps.svg">
         </div>
-        
 
     </div>
+
 
 </body>
 

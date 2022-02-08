@@ -1,0 +1,28 @@
+
+
+/* TA - Typing Animation */
+
+/* CSS Part */
+
+
+.caret::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    animation: blink .5s infinite alternate-reverse;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    } 
+
+    50% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
