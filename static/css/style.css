@@ -5,7 +5,10 @@
 
 body {
     background-color: #FCFCFC !important;
-    overflow-x: hidden !important;
+}
+
+.column {
+    /* width: 100% !important; */
 }
 
 .sectionLabel {
@@ -125,6 +128,16 @@ body {
     background-color: #707070;
 }
 
+.dropup {
+    opacity: 0;
+    height: 0 !important;
+}
+
+#mobsec {
+    height: 10em;
+    transition: 1s;
+}
+
 @media screen and (max-width: 650px) {
     .topnav {
         display: none !important;
@@ -146,6 +159,9 @@ body {
     }
     .buttons {
         padding-left: 0em;
+    }
+    .homePage {
+        min-width: 0 !important;
     }
 }
 
@@ -188,5 +204,4 @@ body {
               transform: translateX(0);
     }
   }
-  
 /* /// */

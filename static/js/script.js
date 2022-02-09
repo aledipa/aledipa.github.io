@@ -1,22 +1,25 @@
 // Decides to open or close the menu
 function toggleMenu() {
-    if ($("#mobsec").hasClass("d-none")) {
-        openMenu();
+    $("#mobsec").toggleClass("dropup");
+    if ($("#mobsec").hasClass("dropup")) {
+        $("#menuIcon").attr("src", "static/img/Icons/Menu.svg");
     } else {
-        closeMenu();
+        $("#menuIcon").attr("src", "static/img/Icons/Close.svg");
     }
 }
 
-// Opens the mobile dropdown menu
-function openMenu() {
-    $("#menuIcon").attr("src", "static/img/Icons/Close.svg");
-    $("#mobsec").removeClass("d-none");
+// Smoothly scrolls to wanted section (ID)
+function scrollToId(target_id) { 
+    $('html, body').animate({
+        scrollTop: $("#"+target_id).offset().top
+    }, 2000);
 }
 
-// Closes the mobile dropdown menu
-function closeMenu() {
-    $("#menuIcon").attr("src", "static/img/Icons/Menu.svg");
-    $("#mobsec").addClass("d-none");
+// Smoothly scrolls to the top
+function scrollToTop() {
+    $('html, body').animate({
+        scrollTop: $('body').offset().top
+    }, 2000);
 }
 
 // Animates descriptiom
@@ -50,6 +53,8 @@ function dynamicDescription() {
 
 function animateName() {
     // Istantiates TypingAnimation Class
+    // Created by the good friend of mine Vlad Postu
+    // Original repo: https://github.com/vladpostu/TA-Typing-Animation
     let ta = new TA({
         htmlEl: "#name",
         minDelay: 75,
@@ -89,5 +94,5 @@ function animateName() {
 $(document).ready(
     setTimeout(function() {
         animateName();
-    }, 500)
+    }, 500),
 );

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <link rel="stylesheet" href="static/css/style.css" type="text/css">
     <link rel='stylesheet' href='static/css/TA.css' type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,13 +23,13 @@
     <nav class="topnav navbar glassy sticky-top">
         <!-- Site's Sections -->
         <div class="form-row flex-row justify-content-start ml-2">
-            <img src="static/img/Icons/A2.png" height="65" class="ml-1">
+            <a href="javascript:scrollToTop();"><img src="static/img/Icons/A2.png" height="65" class="ml-1"></a>
             <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50">
-            <p class="mt-3 ml-4"> <a href="#projects" class="navLabel"> Projects </a> </p>
+            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('projects');" class="navLabel"> Projects </a> </p>
             <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50">
-            <p class="mt-3 ml-4"> <a href="#" class="navLabel"> Skills </a> </p>
+            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('skills');" class="navLabel"> Skills </a> </p>
             <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50">
-            <p class="mt-3 ml-4"> <a href="#" class="navLabel"> Experiences </a> </p>
+            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('experiences');" class="navLabel"> Experiences </a> </p>
         </div>
         <!-- Contact Button -->
         <div class="navLabel row flex-row justify-content-end">
@@ -42,13 +42,15 @@
     <nav class="topnavmobile navbar glassy sticky-top">
         <!-- Logo -->
         <div class="form-row flex-row justify-content-start ml-2">
-            <img src="static/img/Icons/A2.png" height="65" class="ml-1">
+            <a href="javascript:scrollToTop();">
+                <img src="static/img/Icons/A2.png" height="65" class="ml-1">
+            </a>
         </div>
         <!-- Site's Sections -->
-        <div class="justify-content-center ml-2 column d-none" id="mobsec">
-            <p class="mt-3 ml-3"> <a href="#projects" class="navLabel"> Projects </a> </p>
-            <p class="mt-3 ml-3"> <a href="#" class="navLabel"> Skills </a> </p>
-            <p class="mt-3 ml-3"> <a href="#" class="navLabel"> Experiences </a> </p>
+        <div class="dropup justify-content-center ml-2 column" id="mobsec">
+            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('projects');" class="navLabel"> Projects </a> </p>
+            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('skills');" class="navLabel"> Skills </a> </p>
+            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('experiences');" class="navLabel"> Experiences </a> </p>
             <p class="ml-3 lightGrayText"> __________________ </p>
         </div>
         <!-- Contact Button -->
