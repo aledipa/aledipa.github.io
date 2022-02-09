@@ -67,6 +67,7 @@ body {
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 95%;
+    min-width: 15em;
     /* width: 95%; */
 }
 
@@ -112,6 +113,10 @@ body {
 
 .buttons {
     padding-left: 4em;
+}
+
+.mainSection {
+    width: 75%;
 }
 
 .verticaline {

@@ -54,7 +54,7 @@ class TA {
      * 
      * @param {number} minDelay
      */
-     setMinDelay(minDelay) {
+    setMinDelay(minDelay) {
         this.state.minDelay = minDelay;
     }
 
@@ -63,7 +63,7 @@ class TA {
      * 
      * @param {number} maxDelay
      */
-     setMaxDelay(maxDelay) {
+    setMaxDelay(maxDelay) {
         this.state.maxDelay = maxDelay;
     }
 

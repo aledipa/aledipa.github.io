@@ -22,7 +22,7 @@ function closeMenu() {
 // Animates descriptiom
 function dynamicDescription() {
     //Defines the parameters
-    var periods = ["Full-Stack Developer from North Italy.", "Python lover since ever", "Always learning something new", "Nice to meet you!"];
+    var periods = ["Full-Stack Developer from Italy.", "Python lover since ever", "Always learning something new", "Nice to meet you!"];
     var pos = 0;
     var proceed = true;
 
@@ -66,21 +66,21 @@ function animateName() {
     setTimeout(() => {$("#dots").removeClass("d-none");}, tout);
 
     // Sets a generic timeout and shows the tab
-    setTimeout(() => {$("#tab").removeClass("d-none");}, (tout+150));
+    setTimeout(() => {$("#tab").removeClass("d-none");}, (tout+110)); //170
 
     setTimeout(() => {
         // Changes the target to the surname
         ta.setSelector("#surname");
         // Types the surname
         ta.typingForward('Di Pasquale', 0);
-    }, (tout+350));
+    }, (tout+380));
 
     // Sets a generic timeout and shows the semicolon
     setTimeout(() => {
         $("#semicolon").removeClass("d-none"); 
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
-    }, (tout+tout+460));
+    }, (tout+tout+470));
 
 }
 
@@ -90,5 +90,4 @@ $(document).ready(
     setTimeout(function() {
         animateName();
     }, 500)
-    
 );
