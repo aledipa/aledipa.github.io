@@ -86,7 +86,6 @@ function animateName() {
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
     }, (tout+tout+470));
-
 }
 
 

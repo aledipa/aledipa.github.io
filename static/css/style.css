@@ -7,13 +7,33 @@ body {
     background-color: #FCFCFC !important;
 }
 
-.column {
-    /* width: 100% !important; */
+input::placeholder {
+    font-style: italic;
+}
+
+.openSource:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #00bd09 !important;
+}
+
+.openSource:active {
+    text-decoration: none;
+    border-bottom: 1px solid #00bd09 !important;
 }
 
 .sectionLabel {
     font-size: 1.6rem;
     font-weight: 300;
+}
+
+.abilitiesLabel {
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.projectsLabel {
+    font-size: 2.2rem;
+    font-weight: 400;
 }
 
 .blackText {
@@ -32,6 +52,18 @@ body {
     color: #E3E3E3 !important;
 }
 
+.whiteText {
+    color: #FCFCFC !important;
+}
+
+.redText {
+    color: #bd0000 !important;
+}
+
+.greenText {
+    color: #00bd09 !important;
+}
+
 .navbar {
     background-color: #FCFCFC !important;
 }
@@ -44,6 +76,11 @@ body {
     -o-backdrop-filter: blur(10px) saturate(200%);
     background-color: #fcfcfcbe !important;
     border: 1px solid rgba(241, 241, 241, 0.3);
+}
+
+.darkGlass {
+    background-color: #2e2e2ebe !important;
+    border: 1px solid rgba(32, 32, 32, 0.3);
 }
 
 .navLabel {
@@ -59,6 +96,26 @@ body {
     min-width: 80em;
 }
 
+.experiencesPage {
+    min-width: 35em !important;
+}
+
+.expImage {
+    opacity: 80%;
+}
+
+.expTab {
+    display: block;
+}
+
+.exportImage {
+    opacity: 65%;
+}
+
+.exportImage:hover {
+    opacity: 100%;
+}
+
 .name {
     font-weight: 500;
     font-size: 3.5rem;
@@ -66,12 +123,16 @@ body {
     margin-left: 1.7em;
 }
 
+.paragraph {
+    font-weight: 200;
+    font-size: 1rem;
+}
+
 .description {
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 95%;
     min-width: 15em;
-    /* width: 95%; */
 }
 
 .blackButton, .grayButton {
@@ -122,10 +183,33 @@ body {
     width: 75%;
 }
 
+.secondarySection {
+    width: 5em !important;
+    margin-left: 9.3em !important;
+}
+
+/* .secondaryIcon {
+    margin-left: 8.6em !important;
+} */
+
 .verticaline {
     width: 0.05em;
-    height: 30em;
+    height: 25em;
     background-color: #707070;
+}
+
+.horizontaline {
+    width: 12em;
+    height: 0.03em;
+    background-color: #707070;
+}
+
+.halfline {
+    height: 15em !important;
+}
+
+.smalline {
+    height: 10em !important;
 }
 
 .dropup {
@@ -138,6 +222,134 @@ body {
     transition: 1s;
 }
 
+@keyframes animatedBackground {
+    from { background-position: 0em 0; }
+    to { background-position: -30em 0; }
+}
+@keyframes animatedBackgroundForward {
+    from { background-position: -30em 0; }
+    to { background-position: 0em 0; }
+}
+
+.languages {
+    width: 80vw;
+    height: 9em;
+    background-repeat: repeat-x;
+    background-size: 30em;
+    line-height: 400px;
+}
+
+.frontend {
+    background-image: url('../img/CodeLangs/Frontend/FrontLangs.png');
+    animation: animatedBackground 8s linear infinite;
+}
+.backend {
+    background-image: url('../img/CodeLangs/Backend/BackLangs.png');
+    animation: animatedBackgroundForward 9s linear infinite;
+}
+
+.database {
+    background-image: url('../img/CodeLangs/Server/Server.png');
+    animation: animatedBackground 8s linear infinite;
+}
+
+.abilitiesPage {
+    margin-top: -10em;
+    min-width: 80em;
+    background-color: transparent !important;
+}
+
+.footer {
+    background-color: #262626;
+    height: 62em;
+}
+
+.contactForm {
+    width: 80%;
+    min-width: 23em;
+    min-height: 65%;
+    max-height: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+    border: 2px solid #7B7B7B;
+    border-radius: 15px;
+}
+
+.inputBox {
+    width: 75%;
+    /* min-width: 8em; */
+    background-color: #353535;
+    color: #FCFCFC;
+    border: 1px solid #E4E4E4;
+    border-left: none;
+    border-radius: 0px 10px 10px 0px;
+    outline: 0;
+}
+
+.inputIcon {
+    background-color: #353535;
+    border: 1px solid #E4E4E4;
+    border-right: none;
+    border-radius: 10px 0px 0px 10px;
+    outline: 0;
+}
+
+.messageBox {
+    height: 12em;
+    width: 90%;
+}
+
+.smallerButton {
+    width: 7em;
+    height: 3em;
+}
+
+.projectImage {
+    border-radius: 10px;
+    opacity: 90%;
+}
+
+.langsTags {
+    margin-top: -0.8em;
+}
+
+.languageTag {
+    font-size: 0.6rem;
+    font-weight: 400;
+    border: 1.5px solid #202020;
+    border-radius: 5px;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    /* margin-top: -0.8em; */
+}
+
+.orangeTag {
+    color: #E55638;
+    border-color: #E55638;
+}
+
+.azureTag {
+    color: #2299F8;
+    border-color: #2299F8;
+}
+
+.yellowTag {
+    color: #ceb70d;
+    border-color: #ceb70d;
+}
+
+.purpleTag {
+    color: #52219B;
+    border-color: #52219B;
+}
+
+.blueTag {
+    color: #0868AC;
+    border-color: #0868AC;
+}
+
 @media screen and (max-width: 650px) {
     .topnav {
         display: none !important;
@@ -146,9 +358,10 @@ body {
     .topnavmobile {
         display: block !important;
     }
-    #graph0 {
+    #graph0, #graph1 {
         display: none;
     }
+    
     .name {
         margin-left: 0.8em;
         zoom: 70%;
@@ -162,6 +375,36 @@ body {
     }
     .homePage {
         min-width: 0 !important;
+    }
+    .languages {
+        background-size: 20em;
+        margin-left: 1em !important;
+    }
+    .secondarySection {
+        width: 5em !important;
+        margin-left: 5em !important;
+    }
+    .expTab {
+        display: none;
+    }
+    .abilitiesPage {
+        margin-top: 2em;
+    }
+    .contactForm, .footer {
+        border: none;
+        margin-top: 5em;
+    }
+    .langsTags {
+        width: 15em !important;
+    }
+    
+    @keyframes animatedBackground {
+        from { background-position: 0em 0; }
+        to { background-position: -20em 0; }
+    }
+    @keyframes animatedBackgroundForward {
+        from { background-position: -20em 0; }
+        to { background-position: 0em 0; }
     }
 }
 
