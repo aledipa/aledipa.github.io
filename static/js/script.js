@@ -86,6 +86,12 @@ function animateName() {
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
     }, (tout+tout+470));
+
+
+    // Sets safely the surname text
+    setTimeout(() => {
+        $("#surname").text("Di Pasquale");
+    }, (tout+tout+tout));
 }
 
 
