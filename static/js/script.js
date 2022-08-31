@@ -94,6 +94,21 @@ function animateName() {
     }, (tout+tout+tout));
 }
 
+// Creates the email's link
+function createLink(name, subject, message) {
+    return "mailto:aledipa.03@gmail.com?subject="+name+subject+"&body="+message;
+}
+
+// Sends the email
+function sendEmail() {
+    let name = $("#mail_name").val();
+    let subject = $("#subject").val();
+    let message = $("#message").val();
+    if (name.length > 0) {
+        name += " - ";
+    }
+    window.location.href = createLink(name, subject, message);
+}
 
 // Onload functions
 $(document).ready(

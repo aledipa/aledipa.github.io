@@ -535,20 +535,20 @@
                 <div class="column mr-t pr-5">
                     <!-- Title -->
                     <p class="lightGrayText abilitiesLabel">Contact me</p>
-                    <!-- Mail Input -->
+                    <!-- Name Input -->
                     <div class="column pt-5">
-                        <p class="lightGrayText"> Email <a class="redText"><b>*</b></a> </p>
-                        <div class="input-group">
-                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Mail.svg" height="35"/></span>
-                            <input class="inputBox p-2" name="mail" id="mail" type="mail" placeholder="email@domain.com"  aria-label="Email" autocomplete="email" required>
-                        </div>
-                    </div>
-                    <!-- name Input -->
-                    <div class="column pt-5">
-                        <p class="lightGrayText"> Name <a class="redText"><b>*</b></a> </p>
+                        <p class="lightGrayText"> Name </p>
                         <div class="input-group">
                             <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Name.svg" height="35"/></span>
-                            <input class="inputBox p-2" name="name" id="name" type="name" placeholder="Mario Rossi"  aria-label="name" autocomplete="name" required>
+                            <input class="inputBox p-2" name="name" id="mail_name" type="name" placeholder="Mario Rossi"  aria-label="name" autocomplete="name">
+                        </div>
+                    </div>
+                    <!-- Mail Input -->
+                    <div class="column pt-5">
+                        <p class="lightGrayText"> Subject <a class="redText"><b>*</b></a> </p>
+                        <div class="input-group">
+                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Mail.svg" height="35"/></span>
+                            <input class="inputBox p-2" name="mail" id="subject" type="mail" placeholder="Anything"  aria-label="Email" autocomplete="email" required>
                         </div>
                     </div>
                     <!-- Message Input -->
@@ -557,9 +557,12 @@
                         <span class="inputIcon p-2"></span>
                         <textarea class="inputBox messageBox p-2" name="message" id="message" type="message" placeholder="Hi, Alessandro"  aria-label="message" autocomplete="no" cols="40" required></textarea>
                     </div>
+                    
                     <!-- Submit button -->
-                    <input class="grayButton smallerButton mt-5 mb-1" type="button" value="Submit">
+                    <input class="grayButton smallerButton mt-5 mb-1" type="button" value="Submit" onclick="sendEmail();">
                 </div>
+                <!-- Disclaimer -->
+                <p class="grayText pt-2"><b class="redText">*</b> Required field</p>
             </div>
         </form>
     </footer>
