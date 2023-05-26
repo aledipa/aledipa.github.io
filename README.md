@@ -1,2 +1,5 @@
 # aledipa.github.io
-Portfolio website
+
+Portfolio website.
+
+Designed and developed by me
