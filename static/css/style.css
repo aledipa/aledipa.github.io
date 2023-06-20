@@ -354,6 +354,16 @@ input::placeholder {
     border-color: #0868AC;
 }
 
+.greenTag {
+    color: #08ac0e;
+    border-color: #08ac0e;
+}
+
+.grayTag {
+    color: #afafaf;
+    border-color: #afafaf;
+}
+
 @media screen and (max-width: 650px) {
     .topnav {
         display: none !important;
