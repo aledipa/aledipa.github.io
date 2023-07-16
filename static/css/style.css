@@ -226,35 +226,43 @@ input::placeholder {
     transition: 1s;
 }
 
-@keyframes animatedBackground {
+@keyframes animatedFrontend {
+    from { background-position: 0em 0; }
+    to { background-position: -35em 0; }
+}
+
+@keyframes animatedBackendForward {
+    from { background-position: -44em 0; }
+    to { background-position: 0em 0; }
+}
+
+@keyframes animatedDatabase {
     from { background-position: 0em 0; }
     to { background-position: -30em 0; }
-}
-@keyframes animatedBackgroundForward {
-    from { background-position: -30em 0; }
-    to { background-position: 0em 0; }
 }
 
 .languages {
     width: 80vw;
     height: 9em;
     background-repeat: repeat-x;
-    background-size: 30em;
     line-height: 400px;
 }
 
 .frontend {
     background-image: url('../img/CodeLangs/Frontend/FrontLangs.png');
-    animation: animatedBackground 8s linear infinite;
+    animation: animatedFrontend 9s linear infinite;
+    background-size: 35em;
 }
 .backend {
     background-image: url('../img/CodeLangs/Backend/BackLangs.png');
-    animation: animatedBackgroundForward 9s linear infinite;
+    animation: animatedBackendForward 10s linear infinite;
+    background-size: 44em;
 }
 
 .database {
     background-image: url('../img/CodeLangs/Server/Server.png');
-    animation: animatedBackground 8s linear infinite;
+    animation: animatedDatabase 8s linear infinite;
+    background-size: 30em;
 }
 
 .abilitiesPage {
@@ -391,8 +399,18 @@ input::placeholder {
         min-width: 0 !important;
     }
     .languages {
-        background-size: 20em;
+        /* background-size: 20em; */
         margin-left: 1em !important;
+    }
+    .frontend {
+        background-size: 23em;
+    }
+    .backend {
+        background-size: 29em;
+    }
+    
+    .database {
+        background-size: 20em;
     }
     .secondarySection {
         width: 5em !important;
@@ -412,13 +430,19 @@ input::placeholder {
         width: 15em !important;
     }
     
-    @keyframes animatedBackground {
+    @keyframes animatedFrontend {
+        from { background-position: 0em 0; }
+        to { background-position: -23em 0; }
+    }
+    
+    @keyframes animatedBackendForward {
+        from { background-position: -29em 0; }
+        to { background-position: 0em 0; }
+    }
+    
+    @keyframes animatedDatabase {
         from { background-position: 0em 0; }
         to { background-position: -20em 0; }
-    }
-    @keyframes animatedBackgroundForward {
-        from { background-position: -20em 0; }
-        to { background-position: 0em 0; }
     }
 }
 
