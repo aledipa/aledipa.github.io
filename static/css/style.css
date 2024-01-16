@@ -5,6 +5,8 @@
 
 body {
     background-color: #FCFCFC !important;
+    touch-action: pan-y;
+    overflow-x: hidden;
 }
 
 input::placeholder {
