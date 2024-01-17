@@ -28,6 +28,10 @@ input::placeholder {
     font-weight: 300;
 }
 
+.skillLabel {
+    width: 105px;
+}
+
 .abilitiesLabel {
     font-weight: 500;
     font-size: xx-large;
