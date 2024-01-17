@@ -39,10 +39,8 @@ input::placeholder {
 }
 
 .w-text {
-    /* width: 90% !important; */
     width: 75dvw !important;
 }
-
 
 .blackText {
     color: #202020;
@@ -84,6 +82,10 @@ input::placeholder {
     -o-backdrop-filter: blur(10px) saturate(200%);
     background-color: #fcfcfcbe !important;
     border: 1px solid rgba(241, 241, 241, 0.3);
+}
+
+.noBorder {
+    border: none !important;
 }
 
 .darkGlass {
