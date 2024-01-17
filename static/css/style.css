@@ -39,8 +39,10 @@ input::placeholder {
 }
 
 .w-text {
-    width: 90% !important;
+    /* width: 90% !important; */
+    width: 75dvw !important;
 }
+
 
 .blackText {
     color: #202020;
