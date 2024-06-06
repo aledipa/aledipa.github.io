@@ -38,15 +38,15 @@ function dynamicDescription() {
         if (periods.length == pos) {pos=0}
         //Alternately updates the period and waits
         if (proceed) {
-            $(".description").toggleClass("slide-left", true);
-            $(".description").text(periods[pos]);
-            pos++
-        } else {
-            $(".description").toggleClass("slide-left", false);
+            $(".description").fadeOut(500, function() {
+                $(".description").text(periods[pos]);
+                $(".description").fadeIn(500);
+                pos++;
+            });
         }
         proceed = !proceed;
 
-        setTimeout(() => animator(periods, pos, proceed), 1500);
+        setTimeout(() => animator(periods, pos, !proceed), 3000);
     }
     
 }
@@ -88,8 +88,9 @@ function animateName() {
     }, (tout+tout+470));
 
 
-    // Sets safely the surname text
+    // Sets safely the name and surname text
     setTimeout(() => {
+        $("#name").text("Alessandro");
         $("#surname").text("Di Pasquale");
     }, (tout+tout+tout));
 }
