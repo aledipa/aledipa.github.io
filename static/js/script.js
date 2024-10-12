@@ -51,48 +51,35 @@ function dynamicDescription() {
     
 }
 
+// Animates the name
 function animateName() {
-    // Istantiates TypingAnimation Class
-    // Created by the good friend of mine Vlad Postu
-    // Original repo: https://github.com/vladpostu/TA-Typing-Animation
-    let ta = new TA({
-        htmlEl: "#name",
-        minDelay: 75,
-        maxDelay: 150,
+    var typed_name = new Typed('#name', {
+        stringsElement: '#typed-name',
+        showCursor: false,
+        typeSpeed: 50,
     });
-
     // Sets a generic timeout
-    var tout = 1350;
-
-    // Types the name
-    ta.typingForward('Alessandro', 0);
+    var tout = 800;
 
     // Sets a generic timeout and shows the dots
     setTimeout(() => {$("#dots").removeClass("d-none");}, tout);
 
     // Sets a generic timeout and shows the tab
-    setTimeout(() => {$("#tab").removeClass("d-none");}, (tout+110)); //170
+    setTimeout(() => {$("#tab").removeClass("d-none");}, (tout+100));
 
-    setTimeout(() => {
-        // Changes the target to the surname
-        ta.setSelector("#surname");
-        // Types the surname
-        ta.typingForward('Di Pasquale', 0);
-    }, (tout+380));
+    var typed_surname = new Typed('#surname', {
+        stringsElement: '#typed-surname',
+        showCursor: false,
+        startDelay: 950,
+        typeSpeed: 50,
+    });
 
     // Sets a generic timeout and shows the semicolon
     setTimeout(() => {
         $("#semicolon").removeClass("d-none"); 
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
-    }, (tout+tout+470));
-
-
-    // Sets safely the name and surname text
-    setTimeout(() => {
-        $("#name").text("Alessandro");
-        $("#surname").text("Di Pasquale");
-    }, (tout+tout+tout));
+    }, (tout+1000));
 }
 
 // Creates the email's link
