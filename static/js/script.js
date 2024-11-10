@@ -104,3 +104,27 @@ $(document).ready(
         animateName();
     }, 500),
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+    const marquees = document.querySelectorAll('.marquee--auto');
+    marquees.forEach(marquee => {
+        const items = marquee.querySelectorAll('.marquee__item');
+        const itemCount = items.length;
+        marquee.style.setProperty('--marquee-items', itemCount);
+        items.forEach((item, index) => {
+            item.style.setProperty('--marquee-item-index', index + 1);
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const marquees = document.querySelectorAll('.inverted-marquee');
+    marquees.forEach(marquee => {
+        const items = marquee.querySelectorAll('.inverted-marquee__item');
+        const itemCount = items.length;
+        marquee.style.setProperty('--marquee-items', itemCount);
+        items.forEach((item, index) => {
+            item.style.setProperty('--marquee-item-index', index + 1);
+        });
+    });
+});
