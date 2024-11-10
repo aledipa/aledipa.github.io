@@ -552,7 +552,7 @@ input::placeholder {
     );
     --marquee-item-width: 70px;
     --marquee-item-height: 70px;
-    --marquee-duration: 15s;
+    --marquee-duration: 25s;
     --marquee-items: 4;
 }
 
