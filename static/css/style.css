@@ -378,10 +378,10 @@ input::placeholder {
     }
     
     .name {
-        margin-left: 0.8em;
-        zoom: 70%;
-        -moz-transform: scale(0.7);
-        transform: scale(0.7);
+        margin-left: 0em;
+        zoom: 80%;
+        -moz-transform: scale(0.8);
+        transform: scale(0.8);
     }
     .categoryIcon {
         margin-right: 2em;
