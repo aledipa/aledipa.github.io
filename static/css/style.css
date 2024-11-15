@@ -85,17 +85,17 @@ input::placeholder {
     -moz-backdrop-filter: blur(10px) saturate(200%);
     -o-backdrop-filter: blur(10px) saturate(200%);
     background-color: #fcfcfcbe !important;
-    border: 1px solid rgba(241, 241, 241, 0.3);
+    border-bottom: 1px solid rgba(241, 241, 241, 0.3);
 }
 
 .noBorder {
     border: none !important;
 }
 
-.darkGlass {
+/* .darkGlass {
     background-color: #2e2e2ebe !important;
     border: 1px solid rgba(32, 32, 32, 0.3);
-}
+} */
 
 .navLabel {
     color: #5C5C5C;
@@ -201,10 +201,6 @@ input::placeholder {
     width: 5em !important;
     margin-left: 9.3em !important;
 }
-
-/* .secondaryIcon {
-    margin-left: 8.6em !important;
-} */
 
 .verticaline {
     width: 0.05em;

@@ -20,6 +20,7 @@
     <script src="static/js/script.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.96/darkreader.min.js"></script>
     <title>AleDipa</title>
 </head>
 
@@ -38,7 +39,8 @@
         </div>
         <!-- Contact Button -->
         <div class="navLabel row flex-row justify-content-end">
-            <img src="static/img/Icons/Contact.svg" height="55" alt="Contact Icon">
+            <img src="static/img/Icons/Contact.svg" height="55" alt="Contact Icon" class="light-icon">
+            <img src="static/img/Icons/icons_dark/Contact_dark.svg" height="55" alt="Contact Icon" class="dark-icon d-none">
             <a href="mailto:aledipa.03@gmail.com"><label class="ml-3 mt-1 pt-2 mr-3 grayText">Contact</label></a>
         </div>
     </nav>
@@ -76,7 +78,7 @@
                     <p class="blackText ml-4" id="name">  </p> <a class="lightGrayText d-none" id="dots">:</a>
                 </div>
                 <div class="row">
-                    <img class="ml-4 d-none" id="tab" src="static/img/Icons/Tab.svg" height="50" alt="Tab key symbol">
+                    <img class="ml-4 d-none" id="tab" src="static/img/Icons/Tab.png" height="50" alt="Tab key symbol">
                     <div class="row">
                         <!-- Di Pasquale -->
                         <p class="grayText ml-4" id="surname">  </p> <a class="lightGrayText d-none" id="semicolon">;</a>
@@ -101,7 +103,8 @@
                 </a>
 
                 <a class="grayButton row pt-1 pl-1 ml-5 mb-3" target="_blank" href="https://docs.google.com/document/d/1ZpJ2wfpum1bXTE0Rt6mUNbkit0Y50V_6VrAbc1Aod-I/edit?usp=sharing">
-                    <img src="static/img/Icons/CV.svg" alt="Resume Curriculum Vitae" height="40" class="mt-1 ml-1" alt="Curriculum Vitae Icon"> 
+                    <img src="static/img/Icons/CV.svg" alt="Resume Curriculum Vitae" height="40" class="mt-1 ml-1 light-icon" alt="Curriculum Vitae Icon"> 
+                    <img src="static/img/Icons/icons_dark/CV_dark.svg" alt="Resume Curriculum Vitae" height="40" class="mt-1 ml-1 dark-icon d-none" alt="Curriculum Vitae Icon"> 
                     <p class="buttonText mt-2 ml-1 pt-1">Resume</p>
                 </a>
             </div>
@@ -117,7 +120,8 @@
         
         <!-- Graphic Lamps Image -->
         <div class="flex-row justify-content-end" id="graph0">
-            <img src="static/img/Graphics/Lamps.svg" alt="Lamps Drawing">
+            <img src="static/img/Graphics/Lamps.svg" alt="Lamps Drawing" onclick="toggleDarkReader();" class="light-icon">
+            <img src="static/img/Graphics/graphics_dark/Lamps_dark.png" width="672" height="1024" alt="Lamps Drawing" onclick="toggleDarkReader();" class="dark-icon d-none">
         </div>
     </div>
 
@@ -134,7 +138,8 @@
                     <p class="projectsLabel ml-3"> 
                         Free GPT4 Web API 
                         <a href="https://api.freegpt4.ddns.net" target="_blank">
-                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                            <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                         </a>
                     </p>
                 </div>
@@ -161,7 +166,7 @@
                     <br>
                     <img class="pb-1 mb-2" src="https://img.shields.io/docker/pulls/d0ckmg/free-gpt4-web-api" alt="Docker Pulls" height="23">
                     <!-- <br> -->
-                    <a class="github-button mt-2" href="https://github.com/aledipa/Free-GPT4-Web-API" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star aledipa/Free-GPT4-Web-API on GitHub">Stars</a>
+                    <a class="github-button mt-2" href="https://github.com/aledipa/Free-GPT4-Web-API" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star aledipa/Free-GPT4-Web-API on GitHub" title="GitHub Stars">Stars</a>
                 </p>
                 
                 <p class="">
@@ -185,7 +190,8 @@
                     <p class="projectsLabel ml-3"> 
                         SearchBullet 
                         <a href="https://searchbullet.org/" target="_blank">
-                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                            <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                         </a>
                     </p>
                 </div>
@@ -221,7 +227,8 @@
                     <p class="projectsLabel ml-3"> 
                         Codifyer 
                         <a href="https://play.google.com/store/apps/details?id=com.dipasquale_alessandro.flutter_codify" target="_blank">
-                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                            <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                         </a>
                     </p>
                 </div>
@@ -309,7 +316,8 @@
         <!-- Portfolio N.D. -->
         <div class="row ml-5 mb-5 mt-1">
             <div>
-                <img class="projectImage mr-3 mt-2" src="static/img/Logos/NicolaDipa.png" alt="Chronometer Mobile App Logo" height="120">
+                <img class="projectImage mr-3 mt-2 light-icon" src="static/img/Logos/NicolaDipa.png" alt="NicolaDipa's Portfolio" height="120">
+                <img class="projectImage mr-3 mt-2 dark-icon d-none" src="static/img/Logos/logos_dark/NicolaDipa_dark.png" alt="NicolaDipa's Portfolio" height="120">
             </div>
             <div class="column">
                 <!-- Title and open button -->
@@ -317,7 +325,8 @@
                     <p class="projectsLabel ml-3"> 
                         Portofolio N.D.
                         <a href="https://nicoladipa.github.io/" target="_blank">
-                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                            <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                         </a>
                     </p>
                 </div>
@@ -347,7 +356,8 @@
         <!-- miniWikipedia -->
         <div class="row ml-5 mb-5 mt-1">
             <div>
-                <img class="projectImage mr-3 mt-2" src="static/img/Logos/miniWikipedia_freepik.svg" alt="ListeNet Script Logo" height="120">
+                <img class="projectImage mr-3 mt-2 light-icon" src="static/img/Logos/miniWikipedia_freepik.svg" alt="ListeNet Script Logo" height="120">
+                <img class="projectImage mr-3 mt-2 dark-icon d-none" src="static/img/Logos/logos_dark/miniWikipedia_freepik_dark.svg" alt="ListeNet Script Logo" height="120">
             </div>
             <div class="column">
                 <!-- Title and open button -->
@@ -355,7 +365,8 @@
                     <p class="projectsLabel ml-3"> 
                         miniWikipedia
                         <a href="https://miniwikipedia.ddns.net/" target="_blank">
-                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                            <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                            <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                         </a>
                     </p>
                 </div>
@@ -435,7 +446,8 @@
                     <p class="projectsLabel ml-3"> 
                         UnderKey
                         <a href="https://doc-0c-4c-docs.googleusercontent.com/docs/securesc/g0npsk16jsam0pg3tnvrafn7lhogs35k/mthp19o9r5a7nn87hjv4jl5h1m2kqc6c/1645516575000/15211874011363485354/15211874011363485354/1Sin-lXdQyIeAFTBmDRqJTwQHgRzX_RLj?e=download&ax=ACxEAsZzV92JBE8jPbGbdNkGQYAfC15wkZ_UOPHlvdxS5-IqF5h5sKYh8TnGQO_OkaDLvVahZXE0lLbholIJL5L9LUh_VrnzUH4aPv1sfhSY-V1oKL6hhULEYt2E_qga0ytsYtqpnXv8p71q201zoUyvQycYlLHyMFcJ9PeXm6dk4Edwv9qstRHiLOFTuAkmQPyu5kQ5fsr7C_rEYfuxsU_srwgHIy5bETB48eTIpSley9feVugPVmmK8zHmfxSgIv8n3yMl2KKj99Yzbercs-1MXLvq8VmjXVFvhlT4_2xVLITsg_nadSdFFTZ_a7D8gQAm82tTsQIOFo3HSZPTGw4LLdM87YOgG_QO3yiDvUcoaw11f8iLnzRRkd-WaUn3HhcOxUcboR40vjmeyQ7Zej4RAz0iu2eN_FMmZ6uTrC5BzrB8hUnrf1qcK7Wa1FPXYGnpmvEeeNqH9ITShhLh3mQ2slK-bUxTNfLKkmk-Jmqm_Tf4_XO-awrXqy0yquE7C5S8tF1cAxsPN4FFBig69b_mi1BkgPpZ3EVoul0mGApFtXo52MF0ED2BnN0xNkgBxT3_WEca_gHZuyG1Jb4SScz_gKJCI_GsawJGBEx5jBkXkwMsMJW2thN1ufkHcUf2zzA1dM61hNMZ1gm0lOWF6nWQsotG-Jc2ju29Mdpsxbw&authuser=0" target="_blank">
-                            <img src="static/img/Icons/Download.svg" height="20" class="exportImage" alt="Download Icon"> 
+                            <img src="static/img/Icons/Download.svg" height="20" class="exportImage light-icon" alt="Download Icon">
+                            <img src="static/img/Icons/icons_dark/Download_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Download Icon">
                         </a>
                     </p>
                 </div>
@@ -506,7 +518,8 @@
     <div class="skillsPage column mt-5" id="skills">
         <!-- FrontEnd skill section -->
         <div class="row ml-5">
-            <img src="static/img/Icons/FrontEnd.svg" height="65" alt="FrontEnd Icon">
+            <img src="static/img/Icons/FrontEnd.svg" height="65" alt="FrontEnd Icon" class="light-icon">
+            <img src="static/img/Icons/icons_dark/FrontEnd_dark.svg" height="65" alt="FrontEnd Icon" class="dark-icon d-none">
             <p class="grayText row d-flex justify-content-center sectionLabel glassy noBorder skillLabel ml-3 pt-3 pr-1 pb-1 z-3"> FrontEnd </p>
             <div class="marquee marquee--auto languages row mt-1">
                 <img class="marquee__item" src="static/img/CodeLangs/Frontend/Bootstrap.svg" alt="bootstrap">
@@ -522,7 +535,8 @@
         </div>
         <!-- BackEnd skill section -->
         <div class="row ml-5">
-            <img src="static/img/Icons/BackEnd.svg" height="65" alt="BackEnd Icon">
+            <img src="static/img/Icons/BackEnd.svg" height="65" alt="BackEnd Icon" class="light-icon">
+            <img src="static/img/Icons/icons_dark/BackEnd_dark.svg" height="65" alt="BackEnd Icon" class="dark-icon d-none">
             <p class="grayText row d-flex justify-content-center sectionLabel glassy noBorder skillLabel ml-3 pt-3 pr-1 pb-1 z-3"> BackEnd </p>
             <div class="inverted-marquee marquee--inverted languages row mt-1 z-0">
                 <img class="inverted-marquee__item" src="static/img/CodeLangs/Backend/C.svg" alt="C Language">
@@ -541,7 +555,8 @@
         </div>
         <!-- Database skill section -->
         <div class="row ml-5">
-            <img src="static/img/Icons/Database.svg" height="65" alt="Database Icon">
+            <img src="static/img/Icons/Database.svg" height="65" alt="Database Icon" class="light-icon">
+            <img src="static/img/Icons/icons_dark/Database_dark.svg" height="65" alt="Database Icon" class="dark-icon d-none">
             <p class="grayText row d-flex justify-content-center sectionLabel glassy noBorder skillLabel ml-3 pt-3 pr-1 pb-1 z-3"> IT & DB </p>
             <div class="marquee marquee--auto languages row mt-1">
                 <img class="marquee__item z-n1" src="static/img/CodeLangs/Server/Bash.svg" alt="Bash">
@@ -569,16 +584,18 @@
     <div class="column secondarySection">
         <!-- ZuluMedical -->
         <div class="experiencesPage row">
-            <img src="static/img/Icons/FullStack.svg" height="75" class="expImage ml-3 mt-3" alt="FullStack Icon">
+            <img src="static/img/Icons/FullStack.svg" height="75" class="expImage ml-3 mt-3 light-icon" alt="FullStack Icon">
+            <img src="static/img/Icons/icons_dark/FullStack_dark.svg" height="75" class="expImage ml-3 mt-3 dark-icon d-none" alt="FullStack Icon">
             <p class="abilitiesLabel ml-3 mt-4 pt-1"> 
                 ZuluMedical  
                 <a href="https://www.zulumedical.net/wp/en/" target="_blank">
-                    <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                    <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                    <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                 </a>
             </p>
         </div>
         <div class="experiencesPage row ml-2">
-            <img src="static/img/Icons/Tab.svg" height="30" class="expTab ml-5 pl-5  mr-3" alt="Tab Key Symbol">
+            <img src="static/img/Icons/Tab.png" height="30" class="expTab ml-5 pl-5  mr-3" alt="Tab Key Symbol">
             <p class="w-50 paragraph"> 
                 Activity performed in the role of Full Stack developer of a warehouse management software, 
                 through the use of SQL (MySQL), UWP platform, C#, XAML, MVVM model
@@ -590,16 +607,18 @@
         </div>
         <!-- CBSistemi -->
         <div class="experiencesPage row">
-            <img src="static/img/Icons/FrontEnd.svg" height="70" class="expImage ml-3 mt-4" alt="FrontEnd Icon">
+            <img src="static/img/Icons/FrontEnd.svg" height="70" class="expImage ml-3 mt-4 light-icon" alt="FrontEnd Icon">
+            <img src="static/img/Icons/icons_dark/FrontEnd_dark.svg" height="70" class="expImage ml-3 mt-4 dark-icon d-none" alt="FrontEnd Icon">
             <p class="abilitiesLabel ml-3 mt-4 pt-2"> 
                 C.B. Sistemi 
                 <a href="https://www.cbsistemi.it/" target="_blank">
-                    <img src="static/img/Icons/Export.svg" height="20" class="exportImage" alt="Export Icon"> 
+                    <img src="static/img/Icons/Export.svg" height="20" class="exportImage light-icon" alt="Export Icon">
+                    <img src="static/img/Icons/icons_dark/Export_dark.svg" height="20" class="exportImage dark-icon d-none" alt="Export Icon"> 
                 </a>
             </p>
         </div>
         <div class="experiencesPage row ml-2">
-            <img src="static/img/Icons/Tab.svg" height="30" class="expTab ml-5 pl-5  mr-3" alt="Tab Key Symbol">
+            <img src="static/img/Icons/Tab.png" height="30" class="expTab ml-5 pl-5  mr-3" alt="Tab Key Symbol">
             <p class="w-50 paragraph"> 
                 Activity performed in the role of Front End developer with backend integration 
                 of the web application StudioWEB v3, a portal for accessing online medical facility reports. 
@@ -646,7 +665,8 @@
         </div>
         <!-- Graphic Needle Image -->
         <div class="flex-row justify-content-end mt-1 pt-1" id="graph1">
-            <img src="static/img/Graphics/Needle.svg" alt="Bricolage Graphic">
+            <img src="static/img/Graphics/Needle.png" alt="Bricolage Graphic" class="light-icon">
+            <img src="static/img/Graphics/graphics_dark/Needle_dark.png" alt="Bricolage Graphic" class="dark-icon d-none">
         </div>
     </div>
 

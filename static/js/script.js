@@ -98,11 +98,40 @@ function sendEmail() {
     window.location.href = createLink(name, subject, message);
 }
 
+/* DARK MODE */
+function toggleAllDarkIcons() {
+    $(".dark-icon").toggleClass("d-none");
+}
+
+function toggleAllLightIcons() {
+    $(".light-icon").toggleClass("d-none");
+}
+
+function toggleAllIcons() {
+    toggleAllDarkIcons();
+    toggleAllLightIcons();
+}
+
+function toggleDarkReader() {
+    toggleAllIcons();
+    if (DarkReader.isEnabled()) {
+        DarkReader.disable();
+
+    } else {
+        DarkReader.enable({
+            brightness: 100,
+            contrast: 90,
+            sepia: 10
+        });
+    }
+}
+
 // Onload functions
 $(document).ready(
     setTimeout(function() {
         animateName();
     }, 500),
+    // // Enable when the system color scheme is dark.
 );
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -127,4 +156,12 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.setProperty('--marquee-item-index', index + 1);
         });
     });
+    DarkReader.auto({
+        brightness: 100,
+        contrast: 95,
+        sepia: 10
+    })
+    if (DarkReader.isEnabled()) {
+        toggleAllIcons();
+    }
 });
