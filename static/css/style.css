@@ -331,6 +331,16 @@ input::placeholder {
     border-color: #E55638;
 }
 
+.redTag {
+    color: #bd0000;
+    border-color: #bd0000;
+}
+
+.purpleTag {
+    color: #800080;
+    border-color: #800080;
+}
+
 .azureTag {
     color: #2299F8;
     border-color: #2299F8;
