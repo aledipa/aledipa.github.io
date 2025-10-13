@@ -16,32 +16,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="icon" href="static/img/Icons/A2.svg" type="image/svg">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.96/darkreader.min.js" defer></script>
+    <script src="static/js/script.js" defer></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/darkreader@4.9.96/darkreader.min.js"></script>
     <title>AleDipa</title>
 </head>
 
-<body>
+<body id="top">
     <!-- NavBar -->
     <nav class="topnav navbar glassy sticky-top">
         <!-- Site's Sections -->
         <div class="form-row flex-row justify-content-start ml-2">
-            <a href="javascript:scrollToTop();"><img src="static/img/Icons/A2.svg" width="65" height="65" class="ml-1" alt="A-Shaped Logo"></a>
-            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Spacer line">
-            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('projects');" class="navLabel"> Projects </a> </p>
-            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Spacer line">
-            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('skills');" class="navLabel"> Skills </a> </p>
-            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Spacer line">
-            <p class="mt-3 ml-4"> <a href="javascript:scrollToId('experiences');" class="navLabel"> Experiences </a> </p>
+            <a href="#top" aria-label="Scroll to top"><img src="static/img/Icons/A2.svg" width="65" height="65" class="ml-1" alt="A-Shaped Logo"></a>
+            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Vertical spacer" aria-hidden="true">
+            <p class="mt-3 ml-4"> <a href="#projects" class="navLabel"> Projects </a> </p>
+            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Vertical spacer" aria-hidden="true">
+            <p class="mt-3 ml-4"> <a href="#skills" class="navLabel"> Skills </a> </p>
+            <img src="static/img/Icons/Vspacer.svg" class="ml-4 mt-1" height="50" alt="Vertical spacer" aria-hidden="true">
+            <p class="mt-3 ml-4"> <a href="#experiences" class="navLabel"> Experiences </a> </p>
         </div>
         <!-- Contact Button -->
         <div class="navLabel row flex-row justify-content-end">
-            <img src="static/img/Icons/Contact.svg" height="55" alt="Contact Icon" class="light-icon">
-            <img src="static/img/Icons/icons_dark/Contact_dark.svg" height="55" alt="Contact Icon" class="dark-icon d-none">
-            <a href="mailto:aledipa.03@gmail.com"><label class="ml-3 mt-1 pt-2 mr-3 grayText">Contact</label></a>
+            <img src="static/img/Icons/Contact.svg" height="55" alt="" class="light-icon" aria-hidden="true">
+            <img src="static/img/Icons/icons_dark/Contact_dark.svg" height="55" alt="" class="dark-icon d-none" aria-hidden="true">
+            <a href="mailto:aledipa.03@gmail.com" aria-label="Contact via email"><span class="ml-3 mt-1 pt-2 mr-3 grayText">Contact</span></a>
         </div>
     </nav>
 
@@ -49,22 +49,22 @@
     <nav class="topnavmobile navbar glassy sticky-top">
         <!-- Logo -->
         <div class="form-row flex-row justify-content-start ml-2">
-            <a href="javascript:scrollToTop();">
+            <a href="#top" aria-label="Scroll to top">
                 <img src="static/img/Icons/A2.svg" height="65" width="65" class="ml-1" alt="A-Shaped Logo">
             </a>
         </div>
         <!-- Site's Sections -->
         <div class="dropup justify-content-center ml-2 column" id="mobsec">
-            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('projects');" class="navLabel"> Projects </a> </p>
-            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('skills');" class="navLabel"> Skills </a> </p>
-            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('experiences');" class="navLabel"> Experiences </a> </p>
-            <p class="mt-3 ml-3"> <a href="javascript:scrollToId('abilities');" class="navLabel"> Abilities </a> </p>
-            <p class="ml-3 lightGrayText"> __________________ </p>
+            <p class="mt-3 ml-3"> <a href="#projects" class="navLabel"> Projects </a> </p>
+            <p class="mt-3 ml-3"> <a href="#skills" class="navLabel"> Skills </a> </p>
+            <p class="mt-3 ml-3"> <a href="#experiences" class="navLabel"> Experiences </a> </p>
+            <p class="mt-3 ml-3"> <a href="#abilities" class="navLabel"> Abilities </a> </p>
+            <p class="ml-3 lightGrayText" aria-hidden="true"> __________________ </p>
         </div>
         <!-- Contact Button -->
-        <div class="menu navLabel row flex-row justify-content-end mt-3 mr-4 pt-1" onclick="toggleMenu();">
-            <img src="static/img/Icons/Menu.svg" height="35" id="menuIcon" alt="Menu Icon">
-        </div>
+        <button class="menu navLabel row flex-row justify-content-end mt-3 mr-4 pt-1" onclick="toggleMenu();" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobsec">
+            <img src="static/img/Icons/Menu.svg" height="35" id="menuIcon" alt="">
+        </button>
     </nav>
 
 
@@ -97,15 +97,15 @@
             
             <!-- Buttons -->
             <div class="buttons row mt-5 pt-5">
-                <a class="blackButton row pt-1 pl-1 ml-5 mb-3" target="_blank" href="https://github.com/aledipa">
-                    <img src="static/img/Icons/GitHub.svg" alt="GitHub Logo" height="50" alt="GitHub Logo"> 
-                    <p class="buttonText mt-2 ml-1 pt-1">GitHub</p>
+                <a class="blackButton row pt-1 pl-1 ml-5 mb-3" target="_blank" rel="noopener noreferrer" href="https://github.com/aledipa" aria-label="Visit GitHub profile">
+                    <img src="static/img/Icons/GitHub.svg" alt="" height="50" aria-hidden="true"> 
+                    <span class="buttonText mt-2 ml-1 pt-1">GitHub</span>
                 </a>
 
-                <a class="grayButton row pt-1 pl-1 ml-5 mb-3" target="_blank" href="https://docs.google.com/document/d/1ZpJ2wfpum1bXTE0Rt6mUNbkit0Y50V_6VrAbc1Aod-I/edit?usp=sharing">
-                    <img src="static/img/Icons/CV.svg" alt="Resume Curriculum Vitae" height="40" class="mt-1 ml-1 light-icon" alt="Curriculum Vitae Icon"> 
-                    <img src="static/img/Icons/icons_dark/CV_dark.svg" alt="Resume Curriculum Vitae" height="40" class="mt-1 ml-1 dark-icon d-none" alt="Curriculum Vitae Icon"> 
-                    <p class="buttonText mt-2 ml-1 pt-1">Resume</p>
+                <a class="grayButton row pt-1 pl-1 ml-5 mb-3" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1ZpJ2wfpum1bXTE0Rt6mUNbkit0Y50V_6VrAbc1Aod-I/edit?usp=sharing" aria-label="View resume">
+                    <img src="static/img/Icons/CV.svg" alt="" height="40" class="mt-1 ml-1 light-icon" aria-hidden="true"> 
+                    <img src="static/img/Icons/icons_dark/CV_dark.svg" alt="" height="40" class="mt-1 ml-1 dark-icon d-none" aria-hidden="true"> 
+                    <span class="buttonText mt-2 ml-1 pt-1">Resume</span>
                 </a>
             </div>
 
@@ -120,8 +120,10 @@
         
         <!-- Graphic Lamps Image -->
         <div class="flex-row justify-content-end" id="graph0">
-            <img src="static/img/Graphics/Lamps.svg" alt="Lamps Drawing" onclick="toggleDarkReader();" class="light-icon">
-            <img src="static/img/Graphics/graphics_dark/Lamps_dark.png" width="672" height="1024" alt="Lamps Drawing" onclick="toggleDarkReader();" class="dark-icon d-none">
+            <button onclick="toggleDarkReader();" aria-label="Toggle dark mode" class="dark-mode-toggle">
+                <img src="static/img/Graphics/Lamps.svg" alt="Toggle dark mode" class="light-icon">
+                <img src="static/img/Graphics/graphics_dark/Lamps_dark.png" width="672" height="1024" alt="Toggle dark mode" class="dark-icon d-none">
+            </button>
         </div>
     </div>
 
@@ -130,7 +132,7 @@
         <!-- Free GPT4 Web API -->
         <div class="row ml-5 mb-5 mt-1">
             <div>
-                <img class="projectImage mr-3 mt-2" src="static/img/Logos/favicon(Nicoladipa).png" alt="ListeNet Script Logo" height="120" alt="FreeGPT4 Logo (by NicolaDipa)">
+                <img class="projectImage mr-3 mt-2" src="static/img/Logos/favicon(Nicoladipa).png" alt="FreeGPT4 Logo" height="120">
             </div>
             <div class="column">
                 <!-- Title and open button -->
@@ -601,9 +603,9 @@
                 </a>
             </p>
         </div>
-        <div class="column">
+        <div class="column experiencesPage">
             <!-- Used languages tags -->
-            <div class="experiencesPage langsTags row ml-5 pl-5 d-flex flex-row row">
+            <div class="langsTags experienceTags row d-flex flex-row">
                 <div class="languageTag redTag mr-2 mb-1"> Angular </div>
                 <div class="languageTag purpleTag mr-2 mb-1"> GraphQL </div>
                 <div class="languageTag blueTag mr-2 mb-1"> TypeScript </div>
@@ -637,9 +639,9 @@
                 </a>
             </p>
         </div>
-        <div class="column">
+        <div class="column experiencesPage">
             <!-- Used languages tags -->
-            <div class="experiencesPage langsTags row ml-5 pl-5 d-flex flex-row row">
+            <div class="langsTags experienceTags row d-flex flex-row">
                 <div class="languageTag blueTag mr-2 mb-1"> C# </div>
                 <div class="languageTag azureTag mr-2 mb-1"> XAML </div>
                 <div class="languageTag greenTag mr-2 mb-1"> MySQL </div>
@@ -671,9 +673,9 @@
                 </a>
             </p>
         </div>
-        <div class="column">
+        <div class="column experiencesPage">
             <!-- Used languages tags -->
-            <div class="experiencesPage langsTags row ml-5 pl-5 d-flex flex-row row">
+            <div class="langsTags experienceTags row d-flex flex-row">
                 <div class="languageTag blueTag mr-2 mb-1"> C# </div>
                 <div class="languageTag purpleTag mr-2 mb-1"> MVC </div>
                 <div class="languageTag orangeTag mr-2 mb-1"> HTML5 </div>
@@ -752,23 +754,23 @@
                             <input class="inputBox p-2" name="name" id="mail_name" type="name" placeholder="Mario Rossi"  aria-label="name" autocomplete="name">
                         </div>
                     </div>
-                    <!-- Mail Input -->
+                    <!-- Subject Input -->
                     <div class="column pt-5">
                         <p class="lightGrayText"> Subject <b class="redText">*</b> </p>
                         <div class="input-group">
-                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Mail.svg" height="35" alt="EMail Icon"/></span>
-                            <input class="inputBox p-2" name="mail" id="subject" type="mail" placeholder="Anything"  aria-label="Email" autocomplete="email" required>
+                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Mail.svg" height="35" alt="Email Icon"/></span>
+                            <input class="inputBox p-2" name="subject" id="subject" type="text" placeholder="Anything"  aria-label="Email subject" autocomplete="off" required>
                         </div>
                     </div>
                     <!-- Message Input -->
                     <p class="lightGrayText mt-5"> Message <b class="redText">*</b> </p>
                     <div class="input-group">
                         <span class="inputIcon p-2"></span>
-                        <textarea class="inputBox messageBox p-2" name="message" id="message" type="message" placeholder="Hi, Alessandro"  aria-label="message" autocomplete="no" cols="40" required></textarea>
+                        <textarea class="inputBox messageBox p-2" name="message" id="message" placeholder="Hi, Alessandro"  aria-label="Message" autocomplete="off" cols="40" rows="5" required></textarea>
                     </div>
                     
                     <!-- Submit button -->
-                    <input class="grayButton smallerButton mt-5 mb-1" type="button" value="Submit" onclick="sendEmail();">
+                    <button class="grayButton smallerButton mt-5 mb-1" type="button" onclick="sendEmail();" aria-label="Send email">Submit</button>
                 </div>
                 <!-- Disclaimer -->
                 <p class="grayText pt-2"><b class="redText">*</b> Required field</p>

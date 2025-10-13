@@ -187,6 +187,21 @@ input::placeholder {
     position: absolute;
     right: 0;
     top: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dark-mode-toggle:focus {
+    outline: 0;
 }
 
 .buttons {
@@ -314,6 +329,11 @@ input::placeholder {
     margin-top: -0.8em;
 }
 
+.experienceTags {
+    margin-left: 5rem;
+    padding-left: 7rem;
+}
+
 .languageTag {
     font-size: 0.6rem;
     font-weight: 400;
@@ -427,9 +447,14 @@ input::placeholder {
         margin-top: 5em;
     }
     .langsTags {
-        width: 15em !important;
+        width: 20em !important;
     }
-    
+    .experienceTags {
+        padding-top: 1.2rem;
+        padding-left: 1.2rem;
+        margin-left: 0;
+    }
+
     @keyframes animatedFrontend {
         from { background-position: 0em 0; }
         to { background-position: -23em 0; }

@@ -1,42 +1,51 @@
 // Decides to open or close the menu
 function toggleMenu() {
-    $("#mobsec").toggleClass("dropup");
-    if ($("#mobsec").hasClass("dropup")) {
+    const $mobsec = $("#mobsec");
+    const $menuButton = $(".menu");
+    $mobsec.toggleClass("dropup");
+    
+    const isExpanded = !$mobsec.hasClass("dropup");
+    $menuButton.attr("aria-expanded", isExpanded);
+    
+    if ($mobsec.hasClass("dropup")) {
         $("#menuIcon").attr("src", "static/img/Icons/Menu.svg");
     } else {
         $("#menuIcon").attr("src", "static/img/Icons/Close.svg");
     }
 }
 
-// Smoothly scrolls to wanted section (ID)
-function scrollToId(target_id) { 
-    $('html, body').animate({
-        scrollTop: $("#"+target_id).offset().top
-    }, 2000);
-}
+// Handle smooth scrolling for hash links
+$(document).on('click', 'a[href^="#"]', function(e) {
+    const target = $(this.getAttribute('href'));
+    if (target.length) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
 
-// Smoothly scrolls to the top
-function scrollToTop() {
-    $('html, body').animate({
-        scrollTop: $('body').offset().top
-    }, 2000);
-}
+// Animates description
+let descriptionIntervalId = null;
 
-// Animates descriptiom
 function dynamicDescription() {
-    //Defines the parameters
-    var periods = ["Full-Stack Developer from Italy.", "Python lover since ever", "Always learning something new", "Nice to meet you!"];
-    var pos = 0;
-    var proceed = true;
+    // Defines the parameters
+    const periods = ["Full-Stack Developer from Italy.", "Python lover since ever", "Always learning something new", "Nice to meet you!"];
+    let pos = 0;
+    let proceed = true;
 
-    //Calls the recursive function
-    setTimeout(animator(periods, pos, proceed), 100);
+    // Clear any existing interval
+    if (descriptionIntervalId) {
+        clearInterval(descriptionIntervalId);
+    }
 
-    //Recursively animates the periods given in the array
-    function animator(periods, pos, proceed) {
-        //Resets the counter when it reaches the limit
-        if (periods.length == pos) {pos=0}
-        //Alternately updates the period and waits
+    // Recursively animates the periods given in the array
+    function animator() {
+        // Resets the counter when it reaches the limit
+        if (periods.length === pos) {
+            pos = 0;
+        }
+        // Alternately updates the period and waits
         if (proceed) {
             $(".description").fadeOut(500, function() {
                 $(".description").text(periods[pos]);
@@ -45,29 +54,33 @@ function dynamicDescription() {
             });
         }
         proceed = !proceed;
-
-        setTimeout(() => animator(periods, pos, !proceed), 3000);
     }
-    
+
+    // Initial call and set interval
+    descriptionIntervalId = setInterval(animator, 2000);
 }
 
 // Animates the name
 function animateName() {
-    var typed_name = new Typed('#name', {
+    const typed_name = new Typed('#name', {
         stringsElement: '#typed-name',
         showCursor: false,
         typeSpeed: 50,
     });
     // Sets a generic timeout
-    var tout = 800;
+    const tout = 800;
 
     // Sets a generic timeout and shows the dots
-    setTimeout(() => {$("#dots").removeClass("d-none");}, tout);
+    setTimeout(() => {
+        $("#dots").removeClass("d-none");
+    }, tout);
 
     // Sets a generic timeout and shows the tab
-    setTimeout(() => {$("#tab").removeClass("d-none");}, (tout+100));
+    setTimeout(() => {
+        $("#tab").removeClass("d-none");
+    }, (tout + 100));
 
-    var typed_surname = new Typed('#surname', {
+    const typed_surname = new Typed('#surname', {
         stringsElement: '#typed-surname',
         showCursor: false,
         startDelay: 950,
@@ -79,23 +92,30 @@ function animateName() {
         $("#semicolon").removeClass("d-none"); 
         $("#dyndescr").removeClass("d-none");
         dynamicDescription();
-    }, (tout+1000));
+    }, (tout + 1000));
 }
 
 // Creates the email's link
 function createLink(name, subject, message) {
-    return "mailto:aledipa.03@gmail.com?subject="+name+subject+"&body="+message;
+    const encodedSubject = encodeURIComponent(name + subject);
+    const encodedMessage = encodeURIComponent(message);
+    return `mailto:aledipa.03@gmail.com?subject=${encodedSubject}&body=${encodedMessage}`;
 }
 
 // Sends the email
 function sendEmail() {
-    let name = $("#mail_name").val();
-    let subject = $("#subject").val();
-    let message = $("#message").val();
-    if (name.length > 0) {
-        name += " - ";
+    const name = $("#mail_name").val().trim();
+    const subject = $("#subject").val().trim();
+    const message = $("#message").val().trim();
+    
+    // Validate required fields
+    if (!subject || !message) {
+        alert("Please fill in all required fields (Subject and Message).");
+        return;
     }
-    window.location.href = createLink(name, subject, message);
+    
+    const namePrefix = name.length > 0 ? name + " - " : "";
+    window.location.href = createLink(namePrefix, subject, message);
 }
 
 /* DARK MODE */
@@ -127,14 +147,14 @@ function toggleDarkReader() {
 }
 
 // Onload functions
-$(document).ready(
+$(document).ready(function() {
     setTimeout(function() {
         animateName();
-    }, 500),
-    // // Enable when the system color scheme is dark.
-);
+    }, 500);
+});
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize marquees
     const marquees = document.querySelectorAll('.marquee--auto');
     marquees.forEach(marquee => {
         const items = marquee.querySelectorAll('.marquee__item');
@@ -144,11 +164,10 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.setProperty('--marquee-item-index', index + 1);
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    const marquees = document.querySelectorAll('.inverted-marquee');
-    marquees.forEach(marquee => {
+    // Initialize inverted marquees
+    const invertedMarquees = document.querySelectorAll('.inverted-marquee');
+    invertedMarquees.forEach(marquee => {
         const items = marquee.querySelectorAll('.inverted-marquee__item');
         const itemCount = items.length;
         marquee.style.setProperty('--marquee-items', itemCount);
@@ -156,12 +175,17 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.setProperty('--marquee-item-index', index + 1);
         });
     });
-    DarkReader.auto({
-        brightness: 100,
-        contrast: 95,
-        sepia: 10
-    })
-    if (DarkReader.isEnabled()) {
-        toggleAllIcons();
+    
+    // Initialize dark mode
+    if (typeof DarkReader !== 'undefined') {
+        DarkReader.auto({
+            brightness: 100,
+            contrast: 95,
+            sepia: 10
+        });
+        
+        if (DarkReader.isEnabled()) {
+            toggleAllIcons();
+        }
     }
 });
