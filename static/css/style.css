@@ -457,13 +457,17 @@ input::placeholder {
         margin-top: 5em;
     }
     .langsTags {
-        width: 25em !important;
+        width: 23em !important;
     }
     .experienceTags {
         padding-top: 1.2rem;
         padding-left: 1.2rem;
         margin-left: 0;
         padding-left: 1.4rem;
+    }
+    .secondaryLine {
+        width: 5em !important;
+        margin-left: 3em !important;
     }
 
     @keyframes animatedFrontend {
