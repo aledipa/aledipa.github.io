@@ -32,7 +32,7 @@ input::placeholder {
     width: 105px;
 }
 
-.abilitiesLabel {
+.educationLabel {
     font-weight: 500;
     font-size: xx-large;
 }
@@ -269,7 +269,7 @@ input::placeholder {
     line-height: 400px;
 }
 
-.abilitiesPage {
+.educationPage {
     margin-top: -10em;
     min-width: 80em;
     background-color: transparent !important;
@@ -449,7 +449,7 @@ input::placeholder {
     .expTab {
         display: none;
     }
-    .abilitiesPage {
+    .educationPage {
         margin-top: 2em;
     }
     .contactForm, .footer {
