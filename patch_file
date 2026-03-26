@@ -1,0 +1,20 @@
+--- static/css/style.css
++++ static/css/style.css
+@@ -179,2 +179,15 @@
+ }
+ 
++.contactButton {
++    background-color: #262626;
++    color: #CFCFCF;
++    text-decoration: none;
++    height: 2.7em;
++    border-radius: 10px;
++    border: none;
++    outline: 0;
++}
++.contactButton:hover {
++    color: #e2e0e0;
++    text-decoration: none;
++}
++EOF
+patch -p0 < patch_file

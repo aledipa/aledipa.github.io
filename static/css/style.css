@@ -179,6 +179,38 @@ input::placeholder {
     text-decoration: none;
 }
 
+.contactButton {
+    background-color: #262626;
+    color: #cfcfcf;
+    text-decoration: none;
+    border-radius: 8px;
+    height: 2.2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contactButton:hover {
+    color: #ffffff;
+    background-color: #3b3b3b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.contactButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
 .buttonText {
     font-weight: 300;
     font-size: larger;
@@ -407,7 +439,7 @@ input::placeholder {
     border-color: #afafaf;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
     .topnav {
         display: none !important;
     }
@@ -563,7 +595,7 @@ input::placeholder {
     }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 850px) {
     .topnavmobile {
         display: none !important;
     }
