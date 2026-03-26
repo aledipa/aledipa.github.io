@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0.00 0.00 76.00 76.00">
-<path stroke="#939393" stroke-width="2.00" fill="none" stroke-linecap="butt" vector-effect="non-scaling-stroke" d="
+<path stroke="#939393" stroke-width="0.00" fill="none" stroke-linecap="butt" vector-effect="non-scaling-stroke" d="
   M 22.48 47.79
   Q 23.24 48.02 23.87 48.53
   C 25.15 49.58 25.58 51.14 27.03 51.93
@@ -40,7 +40,7 @@
   Q 20.22 47.96 20.92 47.77
   Q 21.72 47.56 22.48 47.79"
 />
-<path fill="#262626" d="
+<!-- <path fill="#262626" d="
   M 8.88 0.00
   L 67.09 0.00
   Q 74.48 1.66 76.00 9.03
@@ -89,7 +89,7 @@
   Q 20.22 47.96 20.92 47.77
   Q 21.72 47.56 22.48 47.79
   Z"
-/>
+/> -->
 <path fill="#ffffff" d="
   M 20.79 48.41
   C 22.09 49.43 23.24 50.59 23.92 52.12
