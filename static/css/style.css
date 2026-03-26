@@ -13,6 +13,16 @@ input::placeholder {
     font-style: italic;
 }
 
+:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+:focus-visible {
+    outline: 2.5px solid #7e7e7e !important;
+    outline-offset: 2.5px !important;
+    border-radius: 5px;
+}
+
 .openSource:hover {
     text-decoration: none;
     border-bottom: 1px solid #00bd09 !important;
@@ -155,7 +165,6 @@ input::placeholder {
     height: 3.8em;
     border-radius: 12px;
     border: none;
-    outline: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,7 +221,6 @@ input::placeholder {
     align-items: center;
     justify-content: center;
     border: none;
-    outline: 0;
     font-size: 1rem;
     font-weight: 300;
     transition: all 0.3s ease;
@@ -254,9 +262,6 @@ input::placeholder {
     padding: 0;
 }
 
-.dark-mode-toggle:focus {
-    outline: 0;
-}
 
 .buttons {
     padding-left: 4em;
