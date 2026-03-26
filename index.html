@@ -116,10 +116,9 @@
                 <a class="grayButton ml-5 mb-3" target="_blank" rel="noopener noreferrer"
                     href="https://flowcv.com/resume/acvgandmmp7n" aria-label="View resume">
                     <!-- <a class="grayButton ml-5 mb-3" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1ZpJ2wfpum1bXTE0Rt6mUNbkit0Y50V_6VrAbc1Aod-I/edit?usp=sharing" aria-label="View resume"> -->
-                    <img src="static/img/Icons/CV.svg" alt="" height="32" class="mr-2 light-icon"
+                    <img src="static/img/Icons/CV.svg" alt="" height="32" class="mr-2 light-icon" aria-hidden="true">
+                    <img src="static/img/Icons/icons_dark/CV_dark.svg" alt="" height="32" class="mr-2 dark-icon d-none"
                         aria-hidden="true">
-                    <img src="static/img/Icons/icons_dark/CV_dark.svg" alt="" height="32"
-                        class="mr-2 dark-icon d-none" aria-hidden="true">
                     <span class="buttonText mb-0">Resume</span>
                 </a>
             </div>
@@ -800,50 +799,66 @@
         </div>
     </div>
 
-    <!-- Contact footer form -->
-    <footer class="footer row" id="contact">
-        <form class="contactForm p-5 mt-11 mb-5">
-            <div class="row">
-                <div class="column mr-t pr-5">
-                    <!-- Title -->
-                    <p class="lightGrayText educationLabel">Contact me</p>
-                    <!-- Name Input -->
-                    <div class="column pt-5">
-                        <p class="lightGrayText"> Name </p>
-                        <div class="input-group">
-                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Name.svg" height="35"
-                                    alt="Name Icon" /></span>
-                            <input class="inputBox p-2" name="name" id="mail_name" type="name" placeholder="Mario Rossi"
-                                aria-label="name" autocomplete="name">
-                        </div>
-                    </div>
-                    <!-- Subject Input -->
-                    <div class="column pt-5">
-                        <p class="lightGrayText"> Subject <b class="redText">*</b> </p>
-                        <div class="input-group">
-                            <span class="inputIcon addon p-2 pl-3"><img src="static/img/Icons/Mail.svg" height="35"
-                                    alt="Email Icon" /></span>
-                            <input class="inputBox p-2" name="subject" id="subject" type="text" placeholder="Anything"
-                                aria-label="Email subject" autocomplete="off" required>
-                        </div>
-                    </div>
-                    <!-- Message Input -->
-                    <p class="lightGrayText mt-5"> Message <b class="redText">*</b> </p>
-                    <div class="input-group">
-                        <span class="inputIcon p-2"></span>
-                        <textarea class="inputBox messageBox p-2" name="message" id="message"
-                            placeholder="Hi, Alessandro" aria-label="Message" autocomplete="off" cols="40" rows="5"
-                            required></textarea>
-                    </div>
-
-                    <!-- Submit button -->
-                    <button class="grayButton smallerButton mt-5 mb-1" type="button" onclick="sendEmail();"
-                        aria-label="Send email">Submit</button>
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 mt-5" id="contact">
+        <div class="container footer-container">
+            <div class="row mb-4 pb-4">
+                <div class="col-md-3 mb-4">
+                    <a href="#top" class="d-flex align-items-center footer-brand mb-3">
+                        <img src="static/img/Icons/A2.svg" height="24" width="24" alt="Logo">
+                        <h2 class="footer-title mb-0 ml-2">Alessandro Di Pasquale</h2>
+                    </a>
+                    <p class="footer-desc">
+                        Creative Full-Stack Developer.
+                        <br>Always trying to learn and create something new :)
+                    </p>
                 </div>
-                <!-- Disclaimer -->
-                <p class="grayText pt-2"><b class="redText">*</b> Required field</p>
+                <!-- Explore -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-heading mb-3">Explore</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="#projects" class="footer-link">Projects</a></li>
+                        <li><a href="#skills" class="footer-link">Skills</a></li>
+                        <li><a href="#experiences" class="footer-link">Experiences</a></li>
+                        <li><a href="#education" class="footer-link">Education</a></li>
+                    </ul>
+                </div>
+                <!-- Connect -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-heading mb-3">Connect</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="https://www.linkedin.com/in/alessandro-di-pasquale/" target="_blank"
+                                class="footer-link d-flex align-items-center">
+                                LinkedIn
+                            </a></li>
+                        <li><a href="https://github.com/aledipa" target="_blank"
+                                class="footer-link d-flex align-items-center">
+                                GitHub
+                            </a></li>
+                        <li><a href="mailto:aledipa.03@gmail.com" class="footer-link d-flex align-items-center">
+                                aledipa.03@gmail.com
+                            </a></li>
+                    </ul>
+                </div>
+                <!-- Professional -->
+                <div class="col-md-3 mb-4">
+                    <h3 class="footer-heading mb-3">Professional</h3>
+                    <ul class="list-unstyled footer-list">
+                        <li><a href="https://github.com/aledipa/aledipa.github.io" target="_blank"
+                                class="footer-link">Source Code</a></li>
+                        <li><a href="https://flowcv.com/resume/acvgandmmp7n" target="_blank"
+                                class="footer-link">Resume</a></li>
+                    </ul>
+                </div>
             </div>
-        </form>
+            <div
+                class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center pt-4">
+                <p class="mb-0">© 2022 - 2026 Alessandro Di Pasquale. All rights reserved.</p>
+                <div class="mt-2 mt-md-0 d-flex gap-4">
+                    <span class="">Thank you for visiting!</span>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>

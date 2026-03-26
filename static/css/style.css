@@ -345,48 +345,64 @@ input::placeholder {
 }
 
 .footer {
-    background-color: #262626;
-    height: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    position: relative;
+    z-index: 10;
+    width: 100%;
 }
 
-.contactForm {
-    width: 80%;
-    min-width: 23em;
-    min-height: 65%;
-    max-height: 80%;
-    margin-left: 10%;
-    margin-top: 10%;
-    border: 2px solid #7B7B7B;
-    border-radius: 15px;
+.footer-brand {
+    text-decoration: none;
 }
 
-.inputBox {
-    width: 75%;
-    /* min-width: 8em; */
-    background-color: #353535;
-    color: #FCFCFC;
-    border: 1px solid #E4E4E4;
-    border-left: none;
-    border-radius: 0px 10px 10px 0px;
-    outline: 0;
+.footer-brand:hover {
+    text-decoration: none;
 }
 
-.inputIcon {
-    background-color: #353535;
-    border: 1px solid #E4E4E4;
-    border-right: none;
-    border-radius: 10px 0px 0px 10px;
-    outline: 0;
+.footer-title {
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #393939, #646464);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
 
-.messageBox {
-    height: 12em;
-    width: 90%;
+.footer-desc {
+    font-size: 0.875rem;
+    color: #6b7280;
+    line-height: 1.625;
+    max-width: 20rem;
 }
 
-.smallerButton {
-    width: 7em;
-    height: 3em;
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.footer-list li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-link {
+    font-size: 0.875rem;
+    color: #4b5563;
+    transition: color 0.15s ease-in-out;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    border-top: 1px solid #f3f4f6;
+    font-size: 0.75rem;
+    color: #9ca3af;
 }
 
 .projectImage {
@@ -562,9 +578,7 @@ input::placeholder {
         min-width: 0 !important;
     }
 
-    .contactForm,
     .footer {
-        border: none;
         margin-top: 5em;
     }
 
