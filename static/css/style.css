@@ -545,7 +545,8 @@ input::placeholder {
     }
 
     .buttons {
-        padding-left: 0em;
+        padding-left: 3rem;
+        gap: 0.5rem;
     }
 
     .homePage {
@@ -602,6 +603,22 @@ input::placeholder {
     .secondaryLine {
         width: 5em !important;
         margin-left: 3em !important;
+    }
+
+    .buttons .blackButton,
+    .buttons .grayButton {
+        width: 8em;
+        height: 3.2em;
+    }
+
+    .buttons .buttonText {
+        font-size: 1rem;
+    }
+
+    .buttons .blackButton img,
+    .buttons .grayButton img {
+        height: 24px !important;
+        width: auto !important;
     }
 
     @keyframes animatedFrontend {
